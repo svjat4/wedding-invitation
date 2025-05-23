@@ -1,20 +1,20 @@
 export const data = {
     bride: {
-        L: {
+        P: {
             id: 1,
-            name: 'Andi Setioko <br>(Dispenduk Capil)',
+            name: 'Elya Putri Erista Novita Sari',
+            child: 'Putri ke 1',
+            father: 'Alm. Bapak Agus Sugihardi (DPUPR)',
+            mother: 'Endang Prihatin',
+            image: './src/assets/images/cewe.png'
+        },
+        L: {
+            id: 2,
+            name: 'Andi Setioko <br>(Disdukcapil Magetan)',
             child: 'Putra ke 1',
             father: 'Bapak Sunaryo (Satpol PP)',
             mother: 'Rubingatun',
             image: './src/assets/images/cowo.png'
-        },
-        P: {
-            id: 2,
-            name: 'Elya Putri Erista Novita Sari',
-            child: 'Putri ke 1',
-            father: 'Alm. Bapak Agus Sugihardi',
-            mother: 'Endang Prihatin',
-            image: './src/assets/images/cewe.png'
         },
 
         couple: './src/assets/images/couple.png',
