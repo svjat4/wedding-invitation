@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generator Pesan Undangan</title>
+  <style>
+    :root { --pink:#b94d68; }
+    body{
+      font-family: system-ui, sans-serif; background:#fffafc; padding:2rem; text-align:center;
+    }
+    .card{
+      max-width:550px; margin:auto; background:#fff; padding:2rem;
+      border-radius:12px; box-shadow:0 0 18px rgba(0,0,0,.1);
+    }
+    input[type=text]{width:100%; padding:10px; font-size:1rem; margin:1rem 0;}
+    button{
+      background:var(--pink); color:#fff; border:none; padding:10px 24px;
+      border-radius:6px; font-size:1rem; cursor:pointer;
+    }
+    button.copy{background:#4caf50; margin-top:.75rem;}
+    textarea{
+      width:100%; margin-top:1.5rem; height:480px; resize:none; padding:1rem;
+      font-size:.95rem; line-height:1.4; white-space:pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Generator Pesan Undangan</h1>
+
+    <form onsubmit="buatPesan(event)">
+      <input type="text" id="nama" placeholder="Masukkan Nama Tamu" required />
+      <button type="submit">Buat Pesan</button>
+    </form>
+
+    <textarea id="hasilPesan" readonly style="display:none;"></textarea>
+    <button class="copy" id="copyBtn" style="display:none;" onclick="salin()">Salin Pesan</button>
+  </div>
+
+<script>
+const BASE_URL = "https://svjat4.github.io/wedding-invitation/"; // ubah kalau perlu
+
+function buatPesan(e){
+  e.preventDefault();
+  const namaTamu = document.getElementById('nama').value.trim();
+  if(!namaTamu) return;
+
+  const link = `${BASE_URL}?to=${encodeURIComponent(namaTamu)}`;
+
+  const pesan = `💐Undangan Pernikahan💐
+
+Kepada Yth. 
+Bapak/Ibu/Sdra/i 
+${namaTamu}
+________________ 
+
+Assalamualaikum Warahmatullahi Wabarakatuh 
+
+Dengan mengharap Ridho Allah SWT dan mengikuti Sunnah Rasul SAW. 
+Kami bermaksud mengadakan acara Akad dan Resepsi Pernikahan. 
+
+Andi & Elya 
+
+Akad Nikah: 
+🗓️ Rabu, 6 Agustus 2025 
+⏰ 07.00 WIB s/d Selesai 
+🏡 Alamat : Jl. jawa no.60 RT 02 RW 04, Kel.Kepolorejo, Kec. Magetan, Kab. Magetan, Jawa Timur. 
+
+Temu Manten: 
+🗓️ Rabu, 6 Agustus 2025 
+⏰ 09.00 WIB s/d Selesai 
+🏡 Alamat : Jl. jawa no.60 RT 02 RW 04, Kel.Kepolorejo, Kec. Magetan, Kab. Magetan, Jawa Timur. 
+
+Resepsi: 
+🗓️ Rabu, 6 Agustus 2025 
+⏰ 13.00 WIB s/d Selesai 
+🏡 Alamat : Jl. jawa no.60 RT 02 RW 04, Kel.Kepolorejo, Kec. Magetan, Kab. Magetan, Jawa Timur. 
+
+Berikut link untuk info lengkap dari acara kami untuk mengantarkan Bapak/Ibu/Saudara/i ​​ke tujuan: 
+${link}
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i ​​berkenan hadir untuk memberikan do'a restu di acara pernikahan kami. 
+
+Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. 
+
+Wassalamualaikum Warahmatullahi Wabarakatuh 
+
+Andi 💕 Elya`;
+
+  const area = document.getElementById('hasilPesan');
+  area.value = pesan;
+  area.style.display = 'block';
+  document.getElementById('copyBtn').style.display = 'inline-block';
+}
+
+function salin(){
+  const text = document.getElementById('hasilPesan').value;
+  navigator.clipboard.writeText(text).then(()=>{
+    alert('Pesan undangan berhasil disalin!');
+  });
+}
+</script>
+</body>
+</html>
