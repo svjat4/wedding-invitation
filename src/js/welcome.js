@@ -11,7 +11,7 @@ export const welcome = () => {
     const [iconButton] = audioButton.children;
 
     const generateFigureContent = (bride) => {
-        const {L: {name: brideLName}, P: {name: bridePName}, jawa: jawaImage} = bride;
+        const {P: {name: brideLName}, L: {name: bridePName}, jawa: jawaImage} = bride;
         return `
             <img src="${jawaImage}" alt="jawa animation">
             <figcaption>
