@@ -21,7 +21,7 @@
     ```
 
 2. **Catatan**: Anda memiliki dua pilihan untuk menggunakan kode sumber ini:
-    - **Tanpa Modifikasi**: Buka file [data.js](https://github.com/SandiPerdiansah/wedding-invitation/blob/main/src/assets/data/data.js) untuk langsung menggunakannya.
+    - **Tanpa Modifikasi**: Buka file [data.js](https://github.com/svjat4/wedding-invitation/blob/main/src/assets/data/data.js) untuk langsung menggunakannya.
     - **Dengan Kustomisasi**: Sesuaikan tampilan dan kontennya sesuai kebutuhan Anda.
 
 ### Cara Mengedit `data.js` ✏️
