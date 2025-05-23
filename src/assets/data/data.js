@@ -90,7 +90,7 @@ export const data = {
     bank: [
         {
             id: 1,
-            name: 'Lorem Ipsum',
+            name: 'Andi Setioko',
             icon: './src/assets/images/jatim.png',
             rekening: '0306449877'
         },
