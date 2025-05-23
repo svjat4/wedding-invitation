@@ -91,8 +91,8 @@ export const data = {
         {
             id: 1,
             name: 'Lorem Ipsum',
-            icon: './src/assets/images/bca.png',
-            rekening: '12345678'
+            icon: './src/assets/images/jatim.png',
+            rekening: '0306449877'
         },
         {
             id: 2,
